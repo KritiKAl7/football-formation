@@ -2,7 +2,7 @@
   font-family: sans-serif;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 .position {
@@ -12,10 +12,18 @@
 }
 .positionSpace {
   display: flex;
-  width: 80px;
-  height: 80px;
+  width: 78px;
+  height: 78px;
   background-color: white;
   border: 1px solid;
+}
+.playerpoolcandidate {
+  display: flex;
+  width: 78px;
+  height: 78px;
+  background-color: white;
+  border: 1px solid;
+  margin-left: 20px;
 }
 .formationOverlay {
   position: absolute;
@@ -23,4 +31,32 @@
 }
 .formationSelector {
   z-index: 2;
+}
+.formationSection {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.playerpool {
+  display: flex;
+  width: 540px;
+  height: 520px;
+  background-color: white;
+  border: 1px solid;
+}
+.playerpoolcontent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 520px;
+  height: 520px;
+  background-color: white;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.playerpoolrow {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
 }

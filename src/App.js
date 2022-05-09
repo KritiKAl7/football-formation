@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Select from "react-select";
 import PitchComponent from "./components/pitch";
 import Formation from "./components/formation";
+import Playerpool from "./components/playerpool";
 
 const formations = [
   { value: "4-4-2", label: "4-4-2" },
@@ -22,21 +23,24 @@ export default function App() {
 
   return (
     <div className="App">
-      <div className="formationSelector">
-        <Select
-          defaultValue={selectedOption}
-          onChange={setSelectedOption}
-          options={formations}
-        />
-      </div>
-      <div>
-        <div className="formationOverlay">
-          <Formation formation={formation} />
+      <div className="formationSection">
+        <div className="formationSelector">
+          <Select
+            defaultValue={selectedOption}
+            onChange={setSelectedOption}
+            options={formations}
+          />
         </div>
-        <div className="pitchBackground">
-          <PitchComponent />
+        <div>
+          <div className="formationOverlay">
+            <Formation formation={formation} />
+          </div>
+          <div className="pitchBackground">
+            <PitchComponent />
+          </div>
         </div>
       </div>
+      <Playerpool />
     </div>
   );
 }
