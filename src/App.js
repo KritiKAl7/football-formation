@@ -5,6 +5,8 @@ import Select from "react-select";
 import PitchComponent from "./components/pitch";
 import Formation from "./components/formation";
 import Playerpool from "./components/playerpool";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { DndProvider } from "react-dnd";
 
 const formations = [
   { value: "4-4-2", label: "4-4-2" },
@@ -22,25 +24,27 @@ export default function App() {
   var formation = selectedOption.value;
 
   return (
-    <div className="App">
-      <div className="formationSection">
-        <div className="formationSelector">
-          <Select
-            defaultValue={selectedOption}
-            onChange={setSelectedOption}
-            options={formations}
-          />
-        </div>
-        <div>
-          <div className="formationOverlay">
-            <Formation formation={formation} />
+    <DndProvider backend={HTML5Backend}>
+      <div className="App">
+        <div className="formationSection">
+          <div className="formationSelector">
+            <Select
+              defaultValue={selectedOption}
+              onChange={setSelectedOption}
+              options={formations}
+            />
           </div>
-          <div className="pitchBackground">
-            <PitchComponent />
+          <div>
+            <div className="formationOverlay">
+              <Formation formation={formation} />
+            </div>
+            <div className="pitchBackground">
+              <PitchComponent />
+            </div>
           </div>
         </div>
+        <Playerpool />
       </div>
-      <Playerpool />
-    </div>
+    </DndProvider>
   );
 }

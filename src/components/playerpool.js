@@ -1,5 +1,7 @@
 import React from "react";
 import Playerpoolcandidate from "./playerpoolcanditate.js";
+import profile from "../../assets/Frame 1218small.png";
+import { DragPreviewImage, useDrag } from "react-dnd";
 
 function Playerpool(props) {
   const players = [
@@ -30,14 +32,27 @@ function Playerpool(props) {
     "player1"
   ];
   var groupSize = 5;
+  const [{ isDragging }, drag, dragPreview] = useDrag(() => ({
+    type: "BOX",
+    collect: (monitor) => ({
+      isDragging: monitor.isDragging()
+    })
+  }));
   var rows = players
     .map(function (content) {
       // map content to html elements
-      return <Playerpoolcandidate />;
+      return (
+        <>
+          <DragPreviewImage connect={dragPreview} src={profile} />
+          <div ref={dragPreview} style={{ opacity: isDragging ? 0.5 : 1 }}>
+            <div ref={drag}>
+              <Playerpoolcandidate />
+            </div>
+          </div>
+        </>
+      );
     })
     .reduce(function (r, element, index) {
-      // create element groups with size 3, result looks like:
-      // [[elem1, elem2, elem3], [elem4, elem5, elem6], ...]
       index % groupSize === 0 && r.push([]);
       r[r.length - 1].push(element);
       return r;
