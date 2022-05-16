@@ -1,9 +1,9 @@
 import React from "react";
-import Formation442 from "./formations/formation442.js";
-import Formation433 from "./formations/formation433.js";
-import Formation352 from "./formations/formation352.js";
-import Formation4231 from "./formations/formation4231.js";
-import Formation451 from "./formations/formation451.js";
+import Formation442 from "../formations/formation442.js";
+import Formation433 from "../formations/formation433.js";
+import Formation352 from "../formations/formation352.js";
+import Formation4231 from "../formations/formation4231.js";
+import Formation451 from "../formations/formation451.js";
 
 function Formation(props) {
   const formation = props.formation;

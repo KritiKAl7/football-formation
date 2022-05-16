@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../../assets/Frame 1218small.png";
+import profile from "../../../../assets/Frame 1218small.png";
 
 function Playerpoolcandidate(props) {
   return (

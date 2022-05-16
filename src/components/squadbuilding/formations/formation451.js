@@ -1,5 +1,5 @@
 import React from "react";
-import Position from "../position";
+import Position from "../components/position";
 import "./451style.css";
 function Formation451() {
   const players = [

@@ -1,7 +1,7 @@
 import React from "react";
-import Position from "../position";
-import "./4231style.css";
-function Formation4231() {
+import Position from "../components/position";
+import "./352style.css";
+function Formation352() {
   const players = [
     "player1",
     "player2",
@@ -16,30 +16,28 @@ function Formation4231() {
     "player11"
   ];
   return (
-    <div className="formation4231">
-      <div className="attackLane4231">
+    <div className="formation352">
+      <div className="attackLane352">
         <Position playerName={players[0]} />
-      </div>
-      <div className="midLaneFront4231">
         <Position playerName={players[1]} />
+      </div>
+      <div className="midLane352">
         <Position playerName={players[2]} />
         <Position playerName={players[3]} />
-      </div>
-      <div className="midLaneBack4231">
         <Position playerName={players[4]} />
         <Position playerName={players[5]} />
-      </div>
-      <div className="backLane4231">
         <Position playerName={players[6]} />
+      </div>
+      <div className="backLane352">
         <Position playerName={players[7]} />
         <Position playerName={players[8]} />
         <Position playerName={players[9]} />
       </div>
-      <div className="gkLane4231">
+      <div className="gkLane352">
         <Position playerName={players[10]} />
       </div>
     </div>
   );
 }
 
-export default Formation4231;
+export default Formation352;

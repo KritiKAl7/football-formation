@@ -1,7 +1,7 @@
 import React from "react";
-import Position from "../position";
-import "./442style.css";
-function Formation442() {
+import Position from "../components/position";
+import "./433style.css";
+function Formation433() {
   const players = [
     "player1",
     "player2",
@@ -16,28 +16,28 @@ function Formation442() {
     "player11"
   ];
   return (
-    <div className="formation442">
-      <div className="attackLane442">
+    <div className="formation433">
+      <div className="attackLane433">
         <Position playerName={players[0]} />
         <Position playerName={players[1]} />
-      </div>
-      <div className="midLane442">
         <Position playerName={players[2]} />
+      </div>
+      <div className="midLane433">
         <Position playerName={players[3]} />
         <Position playerName={players[4]} />
         <Position playerName={players[5]} />
       </div>
-      <div className="backLane442">
+      <div className="backLane433">
         <Position playerName={players[6]} />
         <Position playerName={players[7]} />
         <Position playerName={players[8]} />
         <Position playerName={players[9]} />
       </div>
-      <div className="gkLane442">
+      <div className="gkLane433">
         <Position playerName={players[10]} />
       </div>
     </div>
   );
 }
 
-export default Formation442;
+export default Formation433;
