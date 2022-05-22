@@ -32,7 +32,6 @@ function SquadBuildingPage() {
   }
   function onChangeFormation(option) {
     setSelectedOption(option);
-    resetFormation();
     return option;
   }
 
