@@ -7,6 +7,7 @@ import Formation from "./components/formation";
 import Playerpool from "./components/playerpool";
 import { DragDropContext } from "react-beautiful-dnd";
 import { players } from "../../data/players.js";
+import { Button } from "antd";
 
 const formations = [
   { value: "4-4-2", label: "4-4-2" },
@@ -25,11 +26,13 @@ function SquadBuildingPage() {
   const [poolplayer, setPoolPlayer] = useState(players);
 
   const [formationplayer, setFormationPlayer] = useState({});
-
-  function onChange(option) {
-    setSelectedOption(option);
+  function resetFormation() {
     setPoolPlayer(players);
     setFormationPlayer({});
+  }
+  function onChangeFormation(option) {
+    setSelectedOption(option);
+    resetFormation();
     return option;
   }
 
@@ -76,10 +79,12 @@ function SquadBuildingPage() {
           <div className="formationSelector">
             <Select
               defaultValue={selectedOption}
-              onChange={onChange}
+              onChange={onChangeFormation}
               options={formations}
             />
-            <Button />
+            <Button type="primary" onClick={resetFormation}>
+              Reset
+            </Button>
           </div>
           <div>
             <div className="formationOverlay">
