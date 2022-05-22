@@ -1,10 +1,11 @@
 import React from "react";
-import profile from "../../../../assets/Frame 1218small.png";
 
 function Playerpoolcandidate(props) {
+  const player = props.player;
+
   return (
-    <div className="playerpoolcandidate">
-      <img src={profile} alt="profile" />
+    <div className="playerpoolcandidate" ref={props.innerRef}>
+      <img src={player.image} alt="profile" />
     </div>
   );
 }

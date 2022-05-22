@@ -1,8 +1,9 @@
+import img from "../../assets/Frame 1218small.png";
 export const players = [
   {
     id: 1,
     name: "player1",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -10,7 +11,7 @@ export const players = [
   {
     id: 2,
     name: "player2",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -18,7 +19,7 @@ export const players = [
   {
     id: 3,
     name: "player3",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -26,7 +27,7 @@ export const players = [
   {
     id: 4,
     name: "player4",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -34,7 +35,7 @@ export const players = [
   {
     id: 5,
     name: "player5",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -42,7 +43,7 @@ export const players = [
   {
     id: 6,
     name: "player6",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -50,7 +51,7 @@ export const players = [
   {
     id: 7,
     name: "player7",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -58,7 +59,7 @@ export const players = [
   {
     id: 8,
     name: "player8",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -66,7 +67,7 @@ export const players = [
   {
     id: 9,
     name: "player9",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -74,7 +75,7 @@ export const players = [
   {
     id: 10,
     name: "player10",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -82,7 +83,7 @@ export const players = [
   {
     id: 11,
     name: "player11",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -90,7 +91,7 @@ export const players = [
   {
     id: 12,
     name: "player12",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -98,7 +99,7 @@ export const players = [
   {
     id: 13,
     name: "player13",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -106,7 +107,7 @@ export const players = [
   {
     id: 14,
     name: "player14",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -114,7 +115,7 @@ export const players = [
   {
     id: 15,
     name: "player15",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -122,7 +123,7 @@ export const players = [
   {
     id: 16,
     name: "player16",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -130,7 +131,7 @@ export const players = [
   {
     id: 17,
     name: "player17",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -138,7 +139,7 @@ export const players = [
   {
     id: 18,
     name: "player18",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -146,7 +147,7 @@ export const players = [
   {
     id: 19,
     name: "player19",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -154,7 +155,7 @@ export const players = [
   {
     id: 20,
     name: "player20",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -162,7 +163,7 @@ export const players = [
   {
     id: 21,
     name: "player21",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -170,7 +171,7 @@ export const players = [
   {
     id: 22,
     name: "player22",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -178,7 +179,7 @@ export const players = [
   {
     id: 23,
     name: "player23",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -186,7 +187,7 @@ export const players = [
   {
     id: 24,
     name: "player24",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100
@@ -194,7 +195,7 @@ export const players = [
   {
     id: 25,
     name: "player25",
-    image: "../../assets/Frame 1218small.png",
+    image: img,
     atk: 100,
     def: 100,
     spd: 100

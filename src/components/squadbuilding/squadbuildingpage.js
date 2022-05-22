@@ -6,7 +6,6 @@ import PitchComponent from "./components/pitch";
 import Formation from "./components/formation";
 import Playerpool from "./components/playerpool";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import { DndProvider } from "react-dnd";
 import { players } from "../../data/players";
 import { DragDropContext } from "react-beautiful-dnd";
 
@@ -25,8 +24,17 @@ function SquadBuildingPage() {
   });
   var formation = selectedOption.value;
 
+  function onDragEnd(result) {
+    if (!result.destination) {
+      return;
+    }
+
+    if (result.destination.index === result.source.index) {
+      return;
+    }
+  }
   return (
-    <DragDropContext>
+    <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
         <div className="formationSection">
           <div className="formationSelector">

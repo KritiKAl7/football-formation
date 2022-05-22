@@ -23,7 +23,7 @@
   height: 78px;
   background-color: white;
   border: 1px solid;
-  margin-left: 20px;
+  margin: 10px;
 }
 .formationOverlay {
   position: absolute;
@@ -40,23 +40,20 @@
 }
 .playerpool {
   display: flex;
-  width: 540px;
-  height: 520px;
+  width: 550px;
+  height: 500px;
   background-color: white;
-  border: 1px solid;
+  transform: none !important;
 }
 .playerpoolcontent {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 520px;
-  height: 520px;
+  width: 500px;
+  height: 500px;
   background-color: white;
   justify-content: flex-start;
   align-content: flex-start;
-}
-.playerpoolrow {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
+  border: 1px solid;
+  transform: none !important;
 }
