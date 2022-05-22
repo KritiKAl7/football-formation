@@ -5,7 +5,6 @@ import Select from "react-select";
 import PitchComponent from "./components/pitch";
 import Formation from "./components/formation";
 import Playerpool from "./components/playerpool";
-import { HTML5Backend } from "react-dnd-html5-backend";
 import { DragDropContext } from "react-beautiful-dnd";
 import { players } from "../../data/players.js";
 
@@ -22,11 +21,17 @@ function SquadBuildingPage() {
     value: "4-4-2",
     label: "4-4-2"
   });
-  var formation = selectedOption.value;
 
   const [poolplayer, setPoolPlayer] = useState(players);
 
   const [formationplayer, setFormationPlayer] = useState({});
+
+  function onChange(option) {
+    setSelectedOption(option);
+    setPoolPlayer(players);
+    setFormationPlayer({});
+    return option;
+  }
 
   function onDragEnd(result) {
     const { source, destination } = result;
@@ -49,6 +54,7 @@ function SquadBuildingPage() {
         [source.index]: destPlayer
       }));
     } else {
+      // Between formation grid swapping
       const sourcePlayer = formationplayer[source.index];
       const destinationPlayer =
         formationplayer[Number(destination.droppableId)];
@@ -70,13 +76,17 @@ function SquadBuildingPage() {
           <div className="formationSelector">
             <Select
               defaultValue={selectedOption}
-              onChange={setSelectedOption}
+              onChange={onChange}
               options={formations}
             />
+            <Button />
           </div>
           <div>
             <div className="formationOverlay">
-              <Formation formation={formation} players={formationplayer} />
+              <Formation
+                formation={selectedOption.value}
+                players={formationplayer}
+              />
             </div>
             <div className="pitchBackground">
               <PitchComponent />

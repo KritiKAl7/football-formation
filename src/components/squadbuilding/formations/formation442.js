@@ -3,7 +3,7 @@ import Position from "../components/position";
 import "./442style.css";
 function Formation442(props) {
   const players = props.players;
-  console.log(players);
+
   return (
     <div className="formation442">
       <div className="attackLane442">

@@ -8,7 +8,7 @@ function Playerpool(props) {
     index
   ) {
     const droppableID = Number(key) + 30;
-    console.log(droppableID);
+
     if (player !== undefined && player.id !== undefined && player.id !== null) {
       return (
         <div key={player.id}>
