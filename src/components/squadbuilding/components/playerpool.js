@@ -1,51 +1,53 @@
-import React, { useState } from "react";
-import Playerpoolcandidate from "./playerpoolcanditate.js";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import profile from "../../../../assets/Frame 1218small.png";
-import { players } from "../../../data/players.js";
+import React from "react";
+import { Droppable, Draggable } from "react-beautiful-dnd";
 
 function Playerpool(props) {
-  const [availableplayers, setPlayers] = useState(players);
-
-  const playerpool = availableplayers.map(function (player, index) {
-    return (
-      <Droppable droppableId="list">
-        {(provided) => (
-          <div ref={provided.innerRef} {...provided.droppableProps}>
-            <Draggable
-              draggableId={player.id.toString()}
-              key={player.id.toString()}
-              index={index}
-            >
-              {(provided) => (
-                <div
-                  className="playerpoolcandidate"
-                  ref={provided.innerRef}
-                  {...provided.draggableProps}
-                  {...provided.dragHandleProps}
+  const availableplayers = props.players;
+  const playerpool = Object.entries(availableplayers).map(function (
+    [key, player],
+    index
+  ) {
+    const droppableID = Number(key) + 30;
+    console.log(droppableID);
+    if (player !== undefined && player.id !== undefined && player.id !== null) {
+      return (
+        <div key={player.id}>
+          <Droppable
+            droppableId={droppableID.toString()}
+            isDropDisabled={true}
+            key={player.id.toString()}
+          >
+            {(provided) => (
+              <div ref={provided.innerRef} {...provided.droppableProps}>
+                <Draggable
+                  draggableId={key.toString()}
+                  key={player.id.toString()}
+                  index={index}
                 >
-                  <img src={player.image} alt="profile" />
+                  {(provided) => (
+                    <div
+                      className="playerpoolcandidate"
+                      ref={provided.innerRef}
+                      {...provided.draggableProps}
+                      {...provided.dragHandleProps}
+                    >
+                      <img src={player.image} alt="profile" />
+                    </div>
+                  )}
+                </Draggable>
+                <div style={{ visibility: "hidden", height: 0 }}>
+                  {provided.placeholder}
                 </div>
-              )}
-            </Draggable>
-            <div style={{ visibility: "hidden", height: 0 }}>
-              {provided.placeholder}
-            </div>
-          </div>
-        )}
-      </Droppable>
-    );
+              </div>
+            )}
+          </Droppable>
+        </div>
+      );
+    } else {
+      return <div className="playerpoolcandidate" key={key}></div>;
+    }
   });
 
-  function onDragEnd(result) {
-    if (!result.destination) {
-      return;
-    }
-
-    if (result.destination.index === result.source.index) {
-      return;
-    }
-  }
   return (
     <div className="playerpool">
       <div className="playerpoolcontent">{playerpool}</div>

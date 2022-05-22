@@ -1,7 +1,7 @@
 import React from "react";
 import Position from "../components/position";
 import "./433style.css";
-function Formation433() {
+function Formation433(props) {
   const players = [
     "player1",
     "player2",

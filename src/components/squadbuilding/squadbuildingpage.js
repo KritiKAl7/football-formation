@@ -6,8 +6,8 @@ import PitchComponent from "./components/pitch";
 import Formation from "./components/formation";
 import Playerpool from "./components/playerpool";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import { players } from "../../data/players";
 import { DragDropContext } from "react-beautiful-dnd";
+import { players } from "../../data/players.js";
 
 const formations = [
   { value: "4-4-2", label: "4-4-2" },
@@ -24,15 +24,45 @@ function SquadBuildingPage() {
   });
   var formation = selectedOption.value;
 
+  const [poolplayer, setPoolPlayer] = useState(players);
+
+  const [formationplayer, setFormationPlayer] = useState({});
+
   function onDragEnd(result) {
-    if (!result.destination) {
+    const { source, destination } = result;
+    if (!destination) {
       return;
     }
+    if (Number(source.droppableId) > 25) {
+      // This means the interaction is between pool and pitch
+      const sourcePlayer = poolplayer[source.index];
 
-    if (result.destination.index === result.source.index) {
-      return;
+      setFormationPlayer((prevformationplayer) => ({
+        ...prevformationplayer,
+        [destination.droppableId]: sourcePlayer
+      }));
+
+      const destPlayer = formationplayer[Number(destination.droppableId)];
+
+      setPoolPlayer((prevPoolPlayer) => ({
+        ...prevPoolPlayer,
+        [source.index]: destPlayer
+      }));
+    } else {
+      const sourcePlayer = formationplayer[source.index];
+      const destinationPlayer =
+        formationplayer[Number(destination.droppableId)];
+      setFormationPlayer((prevformationplayer) => ({
+        ...prevformationplayer,
+        [destination.droppableId]: sourcePlayer
+      }));
+      setFormationPlayer((prevformationplayer) => ({
+        ...prevformationplayer,
+        [source.droppableId]: destinationPlayer
+      }));
     }
   }
+
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
@@ -46,14 +76,14 @@ function SquadBuildingPage() {
           </div>
           <div>
             <div className="formationOverlay">
-              <Formation formation={formation} />
+              <Formation formation={formation} players={formationplayer} />
             </div>
             <div className="pitchBackground">
               <PitchComponent />
             </div>
           </div>
         </div>
-        <Playerpool />
+        <Playerpool players={poolplayer} />
       </div>
     </DragDropContext>
   );

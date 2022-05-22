@@ -1,203 +1,203 @@
 import img from "../../assets/Frame 1218small.png";
-export const players = [
-  {
-    id: 1,
+export const players = {
+  0: {
+    id: 0,
     name: "player1",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 2,
+  1: {
+    id: 1,
     name: "player2",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 3,
+  2: {
+    id: 2,
     name: "player3",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 4,
+  3: {
+    id: 3,
     name: "player4",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 5,
+  4: {
+    id: 4,
     name: "player5",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 6,
+  5: {
+    id: 5,
     name: "player6",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 7,
+  6: {
+    id: 6,
     name: "player7",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 8,
+  7: {
+    id: 7,
     name: "player8",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 9,
+  8: {
+    id: 8,
     name: "player9",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 10,
+  9: {
+    id: 9,
     name: "player10",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 11,
+  10: {
+    id: 10,
     name: "player11",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 12,
+  11: {
+    id: 11,
     name: "player12",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 13,
+  12: {
+    id: 12,
     name: "player13",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 14,
+  13: {
+    id: 13,
     name: "player14",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 15,
+  14: {
+    id: 14,
     name: "player15",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 16,
+  15: {
+    id: 15,
     name: "player16",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 17,
+  16: {
+    id: 16,
     name: "player17",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 18,
+  17: {
+    id: 17,
     name: "player18",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 19,
+  18: {
+    id: 18,
     name: "player19",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 20,
+  19: {
+    id: 19,
     name: "player20",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 21,
+  20: {
+    id: 20,
     name: "player21",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 22,
+  21: {
+    id: 21,
     name: "player22",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 23,
+  22: {
+    id: 22,
     name: "player23",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 24,
+  23: {
+    id: 23,
     name: "player24",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   },
-  {
-    id: 25,
+  24: {
+    id: 24,
     name: "player25",
     image: img,
     atk: 100,
     def: 100,
     spd: 100
   }
-];
+};
