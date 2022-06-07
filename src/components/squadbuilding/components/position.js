@@ -5,7 +5,11 @@ function Position(props) {
   const player = props.player;
   const id = props.id;
   return (
-    <Droppable droppableId={id.toString()} key={id.toString()} index={id}>
+    <Droppable
+      droppableId={id.toString()}
+      key={id.toString() + "fd"}
+      index={id}
+    >
       {(provided) => (
         <div ref={provided.innerRef} {...provided.droppableProps}>
           {player ? player.name : null}

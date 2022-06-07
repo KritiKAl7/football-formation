@@ -8,6 +8,7 @@ import Playerpool from "./components/playerpool";
 import { DragDropContext } from "react-beautiful-dnd";
 import { players } from "../../data/players.js";
 import { Button } from "antd";
+import SkillPoints from "./components/skillpoints";
 
 const formations = [
   { value: "4-4-2", label: "4-4-2" },
@@ -56,7 +57,6 @@ function SquadBuildingPage() {
         [source.index]: destPlayer
       }));
     } else {
-      // Between formation grid swapping
       const sourcePlayer = formationplayer[source.index];
       const destinationPlayer =
         formationplayer[Number(destination.droppableId)];
@@ -97,7 +97,10 @@ function SquadBuildingPage() {
             </div>
           </div>
         </div>
-        <Playerpool players={poolplayer} />
+        <div>
+          <SkillPoints players={formationplayer} />
+          <Playerpool players={poolplayer} />
+        </div>
       </div>
     </DragDropContext>
   );

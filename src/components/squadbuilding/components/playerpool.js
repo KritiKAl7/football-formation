@@ -11,7 +11,7 @@ function Playerpool(props) {
 
     if (player !== undefined && player.id !== undefined && player.id !== null) {
       return (
-        <div key={player.id}>
+        <div key={key}>
           <Droppable
             droppableId={droppableID.toString()}
             isDropDisabled={true}

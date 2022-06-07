@@ -5,24 +5,24 @@ export const players = {
     name: "player1",
     image: img,
     atk: 100,
-    def: 100,
-    spd: 100
+    def: 50,
+    spd: 75
   },
   1: {
     id: 1,
     name: "player2",
     image: img,
     atk: 100,
-    def: 100,
-    spd: 100
+    def: 47,
+    spd: 30
   },
   2: {
     id: 2,
     name: "player3",
     image: img,
-    atk: 100,
+    atk: 40,
     def: 100,
-    spd: 100
+    spd: 50
   },
   3: {
     id: 3,
@@ -30,14 +30,14 @@ export const players = {
     image: img,
     atk: 100,
     def: 100,
-    spd: 100
+    spd: 20
   },
   4: {
     id: 4,
     name: "player5",
     image: img,
     atk: 100,
-    def: 100,
+    def: 14,
     spd: 100
   },
   5: {
@@ -45,7 +45,7 @@ export const players = {
     name: "player6",
     image: img,
     atk: 100,
-    def: 100,
+    def: 70,
     spd: 100
   },
   6: {

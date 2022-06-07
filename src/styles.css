@@ -57,3 +57,14 @@
   border: 1px solid;
   transform: none !important;
 }
+.skillpoints {
+  width: 151px;
+  height: 94px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
